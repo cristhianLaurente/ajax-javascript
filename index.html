@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Ajax - Cristhian Laurente</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        Opciones
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-dark btn-block" id='btnGetData'>Traer Usuarios</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        Lista de Usuarios
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-responsive" id='table' hidden='hidden'>
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>nombre</th>
+                                    <th>username</th>
+                                    <th>email</th>
+                                    <th>telefono</th>
+                                    <th>website</th>
+                                </tr>
+                            </thead>
+                            <tbody id='tbody'>
+
+                            </tbody>
+                        </table>
+
+                        <div class="alert alert-success text-center" id='loading' hidden='hidden'>
+                            <div class="alert-heading">
+                                Cargando
+                            </div>
+                            <i class="fa fa-refresh fa-spin fa-2x"></i>
+                            <p>Estamos conectandonos con el servidor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src='./index.js'></script>
+
+</body>
+
+</html>
